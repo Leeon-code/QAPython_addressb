@@ -33,6 +33,7 @@ class GroupHelper:
         # submit deletion
         wd.find_element(By.NAME, "delete").click()
         self.return_to_groups_page()
+
     def open_group_page(self):
         wd = self.app.wd
         wd.find_element(By.LINK_TEXT, "groups").click()
