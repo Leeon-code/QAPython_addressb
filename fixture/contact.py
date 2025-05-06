@@ -13,7 +13,6 @@ class ContactHelper:
         wd = self.app.wd
         # init group creation
         self.open_add_contact_page()
-
         # fill contact form
         wd.find_element(By.NAME, "firstname").send_keys("%s" % contact.firstname) #("wqeqwe")
         wd.find_element(By.NAME, "middlename").send_keys("%s" % contact.middlename) #("qwe")
@@ -24,7 +23,6 @@ class ContactHelper:
         wd.find_element(By.NAME, "address").send_keys("%s" % contact.address) #("qwewe")
         wd.find_element(By.NAME, "mobile").send_keys("%s" % contact.mobile) #("872364823")
         wd.find_element(By.NAME, "email").send_keys("%s" % contact.email) #("qweqw@wqewqe.ru")
-
         # submit contact creation
         wd.find_element(By.NAME, "submit").click()
         self.return_to_home_page()
